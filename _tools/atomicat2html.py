@@ -172,6 +172,9 @@ def main():
     ap.add_argument("--video-id", required=True); ap.add_argument("--account", required=True)
     ap.add_argument("--title", default=None); ap.add_argument("--max-width", default="400px")
     ap.add_argument("--ratio", default="177.77777777777777%")
+    ap.add_argument("--delay", type=int, default=0, help="segundos do pitch para revelar a oferta")
+    ap.add_argument("--hide-from", type=int, default=None, help="indice da 1a secao (0-based) escondida ate o pitch")
+    ap.add_argument("--hide-to", type=int, default=None, help="indice da ultima secao escondida (inclusive)")
     a = ap.parse_args()
     d = json.load(open(a.builder))
     page = d.get("page") or {}
@@ -188,7 +191,13 @@ def main():
         f's.src="https://scripts.converteai.net/{a.account}/players/{vid}/v4/player.js",s.async=!0,document.head.appendChild(s);</script>'
     )
 
-    body = "".join(render(s, video_html, top=True) for s in d["sections"])
+    parts = []
+    for i, sec in enumerate(d["sections"]):
+        h = render(sec, video_html, top=True)
+        if a.delay and a.hide_from is not None and a.hide_from <= i <= (a.hide_to if a.hide_to is not None else 10**6):
+            h = h.replace('<section class="ac-sec ', '<section class="ac-sec esconder ', 1)
+        parts.append(h)
+    body = "".join(parts)
     colors = page.get("color") or {}
     ff = page.get("fontFamily") or {}
     base = f"""
@@ -255,6 +264,13 @@ units.forEach(function(u){u.querySelector('.cd-d').textContent=pad(v[u.dataset.u
 </body>
 </html>
 """
+    if a.delay:
+        delay_js = (
+            "<style>.esconder{display:none}</style>\n<script>var delaySeconds=%d;"
+            "var player=document.querySelector('vturb-smartplayer');"
+            "player.addEventListener('player:ready',function(){"
+            "player.displayHiddenElements(delaySeconds,['.esconder'],{persist:true});});</script>" % a.delay)
+        out = out.replace("</body>", delay_js + "\n</body>")
     open(a.out, "w").write(out)
     print("ok", len(out), "bytes; fonts:", sorted(fonts))
 
