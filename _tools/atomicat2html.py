@@ -37,7 +37,10 @@ def decls(style, skip=()):
             continue  # nested group handled elsewhere
         if p == "fontFamily":
             fonts.add(str(v).split(",")[0].strip("'\" "))
-        for bucket, val in zip((d, t, m), split(v)):
+        vals = list(split(v))
+        if p in ("right", "left") and isinstance(vals[0], str) and vals[0].startswith("-") and vals[2] is None:
+            vals[2] = "20%"  # selos posicionados fora do card: no mobile trazemos para dentro
+        for bucket, val in zip((d, t, m), vals):
             if val is None or val == "":
                 continue
             if isinstance(val, (int, float)) and p not in UNITLESS:
