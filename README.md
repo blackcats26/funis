@@ -8,3 +8,5 @@ Estrutura de cada domínio:
 
 Domínios:
 - `besthealthadvice.online/` → projeto `besthealthadvice`
+- `theamericanhealthjournal.online/` → projeto `theamericanhealthjournal`
+- `thebakingsodarecipe.online/` → projeto `thebakingsodarecipe`
