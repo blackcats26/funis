@@ -24,7 +24,9 @@ a{color:inherit}
 .ac-cont{width:100%;display:flex;flex-direction:column}
 .ac-sec>.ac-boxed{max-width:1140px;margin:0 auto}
 .ac-wrap>.ac-boxed{max-width:1140px;margin:0 auto}
-.ac-wrap{display:flex;flex-direction:column;max-width:100%}
+.ac-wrap{display:flex;flex-direction:column;max-width:100%;min-width:0;position:relative}
+.ac-cont{min-width:0;position:relative}
+.ac-cont>*{min-width:0}
 .ac-text{margin:0;word-wrap:break-word}
 .ac-text *:not(i),.ac-btn *:not(i){font-family:inherit}
 .ac-icon{display:inline-flex;align-items:center;justify-content:center;line-height:1}
