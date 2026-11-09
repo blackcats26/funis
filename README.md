@@ -1,5 +1,10 @@
 # funis
 
-Uma pasta por domínio. Cada pasta é o "Root directory" de um projeto no Cloudflare Pages.
+Uma pasta por domínio. Cada pasta é um projeto separado na Cloudflare (Workers com static assets).
 
-- `besthealthadvice.online/` → besthealthadvice.online
+Estrutura de cada domínio:
+- `<dominio>/wrangler.jsonc` → config do projeto (nome do projeto na Cloudflare)
+- `<dominio>/public/` → páginas publicadas (ex.: `public/burntide/index.html` vira `/burntide/`)
+
+Domínios:
+- `besthealthadvice.online/` → projeto `besthealthadvice`
