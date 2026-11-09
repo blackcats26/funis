@@ -205,7 +205,7 @@ a{{color:inherit}}
 .ac-sec>.ac-boxed{{max-width:1140px;margin:0 auto}}
 .ac-wrap>.ac-boxed{{max-width:1140px;margin:0 auto}}
 .ac-wrap{{display:flex;flex-direction:column;max-width:100%;min-width:0;position:relative}}
-.ac-cont{{min-width:0;position:relative}}
+.ac-cont{{min-width:0;position:relative}}\n.ac-wrap>.ac-cont{{flex-grow:1}}
 .ac-cont>*{{min-width:0}}
 .ac-text{{margin:0;word-wrap:break-word}}
 .ac-text *:not(i),.ac-btn *:not(i){{font-family:inherit}}
