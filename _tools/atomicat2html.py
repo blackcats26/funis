@@ -172,6 +172,7 @@ def main():
     ap.add_argument("--video-id", required=True); ap.add_argument("--account", required=True)
     ap.add_argument("--title", default=None); ap.add_argument("--max-width", default="400px")
     ap.add_argument("--ratio", default="177.77777777777777%")
+    ap.add_argument("--src-map", default=None, help='JSON {"url antiga": "url nova"} para trocar imagens')
     ap.add_argument("--delay", type=int, default=0, help="segundos do pitch para revelar a oferta")
     ap.add_argument("--hide-from", type=int, default=None, help="indice da 1a secao (0-based) escondida ate o pitch")
     ap.add_argument("--hide-to", type=int, default=None, help="indice da ultima secao escondida (inclusive)")
@@ -264,6 +265,9 @@ units.forEach(function(u){u.querySelector('.cd-d').textContent=pad(v[u.dataset.u
 </body>
 </html>
 """
+    if a.src_map:
+        for old, new in json.loads(a.src_map).items():
+            out = out.replace(old, new)
     if a.delay:
         delay_js = (
             "<style>.esconder{display:none}</style>\n<script>var delaySeconds=%d;"

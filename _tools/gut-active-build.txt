@@ -1,0 +1,3 @@
+{"https://media.atomicatmedia.net/u/REN0Q1fZpmQoavmsKCn3HsHy0T42/Pictures/share/pageeZ9IF2K/kit_2.png":"img/kit-2.webp","https://media.atomicatmedia.net/u/REN0Q1fZpmQoavmsKCn3HsHy0T42/Pictures/share/pageeZ9IF2K/kit_3.png":"img/kit-3.webp","https://media.atomicatmedia.net/u/REN0Q1fZpmQoavmsKCn3HsHy0T42/Pictures/share/pageeZ9IF2K/kit_6.png":"img/kit-6.webp"}
+# comando usado:
+# python3 atomicat2html.py gutactive_builder.json index.html --video-id 6af1f780ffc8452284b8696b --account dc39396a-fce0-4c6e-a398-29b2d73580ef --title "Gut Active" --max-width 100% --ratio 56.25% --delay 2277 --hide-from 2 --hide-to 6 --src-map "<json acima>"
