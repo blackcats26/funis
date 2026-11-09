@@ -934,6 +934,6 @@ if(!showSec&&r>0&&v.seconds>0&&units.length&&units[units.length-1].dataset.u==='
 units.forEach(function(u){u.querySelector('.cd-d').textContent=pad(v[u.dataset.u]||0)});if(r>0)setTimeout(tick,1000)}tick()})})();
 </script>
 <style>.esconder{display:none}</style>
-<script>var delaySeconds=2277;var player=document.querySelector('vturb-smartplayer');player.addEventListener('player:ready',function(){player.displayHiddenElements(delaySeconds,['.esconder'],{persist:true});});</script>
+<script>var delaySeconds=2277;var player=document.querySelector('vturb-smartplayer');player.addEventListener('player:ready',function(){player.displayHiddenElements(delaySeconds,['.esconder'],{persist:true});});if(/[?&]preview=1/.test(location.search)){document.querySelectorAll('.esconder').forEach(function(e){e.style.display='block'})}</script>
 </body>
 </html>

@@ -273,7 +273,9 @@ units.forEach(function(u){u.querySelector('.cd-d').textContent=pad(v[u.dataset.u
             "<style>.esconder{display:none}</style>\n<script>var delaySeconds=%d;"
             "var player=document.querySelector('vturb-smartplayer');"
             "player.addEventListener('player:ready',function(){"
-            "player.displayHiddenElements(delaySeconds,['.esconder'],{persist:true});});</script>" % a.delay)
+            "player.displayHiddenElements(delaySeconds,['.esconder'],{persist:true});});"
+            "if(/[?&]preview=1/.test(location.search)){document.querySelectorAll('.esconder').forEach(function(e){e.style.display='block'})}"
+            "</script>" % a.delay)
         out = out.replace("</body>", delay_js + "\n</body>")
     open(a.out, "w").write(out)
     print("ok", len(out), "bytes; fonts:", sorted(fonts))
