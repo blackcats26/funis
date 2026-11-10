@@ -223,26 +223,20 @@ page(f"/{P['slug']}/shipping/", f"{P['name']} Shipping Policy", src_note + f"""
 """)
 
 refs = [
-    ("Digestive Health and Nutrition References", [
-        ("Role of Dietary Fiber in Gut Health — National Institutes of Health (NIH)", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3705355/",
-         "The importance of dietary fiber, such as acacia gum, in promoting a healthy gut microbiome and digestive function."),
-        ("Inulin: Health Benefits, Dosage, and Side Effects — Healthline", "https://www.healthline.com/nutrition/inulin-benefits",
-         "An overview of inulin, a prebiotic fiber, and how it supports gut health by promoting the growth of beneficial bacteria."),
-        ("Prebiotics and Probiotics in Digestive Health — National Institutes of Health (NIH)", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3002581/",
-         "The role of prebiotics and probiotics in maintaining a healthy gut and supporting digestive health."),
-        ("Fiber and Digestive Health: Are You Getting Enough? — WebMD", "https://www.webmd.com/digestive-disorders/features/fiber-are-you-getting-enough",
-         "Why fiber matters for digestive health, including how fibers like flaxseed help regulate bowel movements."),
-    ]),
-    ("Scientific Studies on Digestive Health", [
-        ("Effects of Prebiotics on Gut Health — National Institutes of Health (NIH)", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5372600/",
-         "How prebiotics like galacto-oligosaccharides promote gut health by enhancing the growth of beneficial bacteria."),
-        ("Gut Microbiota and Metabolism — Frontiers in Microbiology", "https://www.frontiersin.org/articles/10.3389/fmicb.2018.01847/full",
-         "How gut microbiota affects metabolism and how fibers like acacia gum may support metabolic health."),
-        ("Guar Gum and Its Effects on Digestive Health — National Institutes of Health (NIH)", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5414632/",
-         "How guar gum improves bowel regularity and supports healthy digestion."),
+    ("Peer-reviewed studies on the types of ingredients in Gut Active", [
+        ("Yang J, Wang HP, Zhou L, Xu CF. Effect of dietary fiber on constipation: a meta analysis. World J Gastroenterol. 2012;18(48):7378-7383.", "https://doi.org/10.3748/wjg.v18.i48.7378",
+         "Dietary fiber intake increased stool frequency in people with constipation."),
+        ("McRorie JW, Daggy BP, Morel JG, et al. Psyllium is superior to docusate sodium for treatment of chronic constipation. Aliment Pharmacol Ther. 1998;12(5):491-497.", "https://doi.org/10.1046/j.1365-2036.1998.00336.x",
+         "Psyllium husk (an ingredient in Gut Active) increased stool water content and bowel movement frequency."),
+        ("Attaluri A, Donahoe R, Valestin J, Brown K, Rao SSC. Randomised clinical trial: dried plums (prunes) vs. psyllium for constipation. Aliment Pharmacol Ther. 2011;33(7):822-828.", "https://doi.org/10.1111/j.1365-2036.2011.04594.x",
+         "Dried plums (plum fruit is an ingredient in Gut Active) improved spontaneous bowel movements and stool consistency."),
+        ("Chen HL, Cheng HC, Wu WT, Liu YJ, Liu SY. Supplementation of konjac glucomannan into a low-fiber Chinese diet promoted bowel movement and improved colonic ecology in constipated adults. J Am Coll Nutr. 2008;27(1):102-108.", "https://doi.org/10.1080/07315724.2008.10719681",
+         "Glucomannan (an ingredient in Gut Active) increased bowel movement frequency in constipated adults."),
+        ("Dimidi E, Christodoulides S, Fragkos KC, Scott SM, Whelan K. The effect of probiotics on functional constipation in adults: a systematic review and meta-analysis of randomized controlled trials. Am J Clin Nutr. 2014;100(4):1075-1084.", "https://doi.org/10.3945/ajcn.114.089151",
+         "Probiotics as a group improved whole-gut transit time, stool frequency and consistency; effects varied by strain."),
     ]),
 ]
-body = '<p>The following sources, provided by the manufacturer, discuss the role of fiber, prebiotics and the gut microbiome in digestive health. They are general research references and do not evaluate this specific product.</p>'
+body = '<p>The studies below evaluated the types of ingredients found in Gut Active (psyllium husk, oat bran, apple pectin, glucomannan, plum fruit and Lactobacillus acidophilus), often at amounts different from those in the product. They did not evaluate Gut Active itself.</p>'
 for h, items in refs:
     body += f"<h2>{h}</h2><ul>" + "".join(
         f'<li><a href="{u}" rel="nofollow noopener" target="_blank">{t}</a><br>{d}</li>' for t, u, d in items) + "</ul>"
