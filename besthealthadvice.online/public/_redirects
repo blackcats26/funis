@@ -1,0 +1,2 @@
+/gut-active /gut/ 301
+/gut-active/* /gut/:splat 301
