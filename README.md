@@ -11,3 +11,4 @@ Domínios:
 - `theamericanhealthjournal.online/` → projeto `theamericanhealthjournal`
 - `thebakingsodarecipe.online/` → projeto `thebakingsodarecipe`
 - `bakingsodanow.online/` → projeto `bakingsodanow`
+- `mensupport.online/` → projeto `mensupport`
