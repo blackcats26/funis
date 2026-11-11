@@ -3,3 +3,4 @@ python3 _tools/atomicat2html.py _tools/gut/builder.json /tmp/gut.html --video-id
 sed -i 's/<section class="ac-sec esconder o-9e645154"/<section id="kits" class="ac-sec esconder o-9e645154"/' /tmp/gut.html
 sed -i '0,/<\/style>/s//html{scroll-behavior:smooth}<\/style>/' /tmp/gut.html
 cp /tmp/gut.html besthealthadvice.online/public/gut/index.html
+# depois do rebuild, reinserir a barra do operador antes de </body> (ver commit "dados da empresa")

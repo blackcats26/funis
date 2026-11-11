@@ -12,7 +12,10 @@ SITE = {
     "domain": "besthealthadvice.online",
     "name": "Best Health Advice",
     "email": "contact@besthealthadvice.online",
-    "updated": "November 10, 2026",
+    "updated": "November 11, 2026",
+    "operator": "Profit Leads Serviços Ltda",
+    "cnpj": "54.991.768/0001-01",
+    "location": "Curitiba, Paraná, Brazil",
 }
 
 PRODUCT = {
@@ -75,6 +78,7 @@ def page(path, title, body):
 </div></main>
 <footer><nav>{footer_links()}</nav>
 <p>These statements have not been evaluated by the Food and Drug Administration. Products mentioned on this site are not intended to diagnose, treat, cure, or prevent any disease.</p>
+<p>{SITE['name']} is operated by {SITE['operator']} (CNPJ {SITE['cnpj']}), {SITE['location']}. Contact: <a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
 <p>&copy; 2026 {SITE['name']}. All rights reserved.</p></footer>
 </body>
 </html>
@@ -99,12 +103,14 @@ page("/contact/", "Contact Us", f"""
 <li>Phone: <a href="tel:{P['support_phone'].replace(' ', '')}">{P['support_phone']}</a></li>
 </ul>
 <p class="note">Tip: include your order number, the full name and the email used at checkout so the support team can locate your order quickly.</p>
+<h2>Who operates this website</h2>
+<p>{S['domain']} is operated by <strong>{S['operator']}</strong>, CNPJ {S['cnpj']}, based in {S['location']}.</p>
 <h2>Questions about this website</h2>
 <p>For questions about the content of {S['domain']}, our policies or privacy requests, write to {site_mail}. We usually reply within 2 business days.</p>
 """)
 
 page("/privacy/", "Privacy Policy", f"""
-<p>This Privacy Policy explains how {S['name']} ("we", "us") collects and uses information when you visit {S['domain']} (the "Site").</p>
+<p>This Privacy Policy explains how {S['name']}, operated by {S['operator']} (CNPJ {S['cnpj']}, {S['location']}) ("we", "us"), collects and uses information when you visit {S['domain']} (the "Site").</p>
 <h2>Information we collect</h2>
 <ul>
 <li><strong>Information collected automatically:</strong> IP address, browser and device type, pages viewed, referring website, and the date and time of your visit.</li>
@@ -138,7 +144,7 @@ page("/privacy/", "Privacy Policy", f"""
 """)
 
 page("/terms/", "Terms &amp; Conditions", f"""
-<p>By accessing or using {S['domain']} (the "Site") you agree to these Terms. If you do not agree, please do not use the Site.</p>
+<p>{S['domain']} (the "Site") is operated by {S['operator']} (CNPJ {S['cnpj']}), {S['location']}. By accessing or using the Site you agree to these Terms. If you do not agree, please do not use the Site.</p>
 <h2>Informational purposes only</h2>
 <p>All content on the Site is provided for general informational purposes only and is not medical advice. It is not a substitute for advice from your physician or another qualified health professional. Always consult a healthcare professional before starting any diet, exercise or supplementation program, or if you have or suspect you have a health problem.</p>
 <h2>Third-party products and websites</h2>
@@ -159,7 +165,7 @@ page("/terms/", "Terms &amp; Conditions", f"""
 
 page("/disclaimer/", "Disclaimer", f"""
 <h2>Affiliate disclosure</h2>
-<p>{S['name']} is an independent publisher. Some links on this Site are affiliate links, which means we may earn a commission if you click a link and make a purchase, at no additional cost to you. We are not the manufacturer or seller of the products presented on this Site.</p>
+<p>{S['name']} is an independent publisher operated by {S['operator']} ({S['location']}). Some links on this Site are affiliate links, which means we may earn a commission if you click a link and make a purchase, at no additional cost to you. We are not the manufacturer or seller of the products presented on this Site.</p>
 <h2>Not medical advice</h2>
 <p>The information on this Site is for educational and informational purposes only and is not intended as a substitute for professional medical advice, diagnosis or treatment. Never disregard professional medical advice or delay seeking it because of something you read or watched on this Site.</p>
 <h2>FDA statement</h2>
