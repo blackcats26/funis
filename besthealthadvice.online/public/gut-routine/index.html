@@ -289,7 +289,7 @@ footer nav a{color:var(--ink-soft)}
 
 <p>Results vary from person to person. If you take medication or have a medical condition, talk to your doctor before starting any supplement; fiber can affect how some medications are absorbed.</p>
 
-<a class="cta" href="/gut/" data-pass>Watch the Gut Active presentation<span>See how the morning routine works and current package prices</span></a>
+<a class="cta" href="https://bg.gutactive.store/dtc-b/?aff_id=1406" data-offer>Watch the Gut Active presentation<span>See how the morning routine works and current package prices</span></a>
 <p class="cta-note">Opens the official presentation page with video.</p>
 
 <figure class="fig">
@@ -322,5 +322,14 @@ footer nav a{color:var(--ink-soft)}
 <script>
 (function(){var q=location.search;if(!q)return;document.querySelectorAll('a[data-pass]').forEach(function(a){a.href+=(a.href.indexOf('?')>-1?'&':'?')+q.slice(1)})})();
 </script>
+<script>/* RedTrack clickid -> vendor subid */
+(function(){
+function cid(){var m=document.cookie.match(/(?:^|; )rtkclickid-store=([^;]+)/);if(m)return decodeURIComponent(m[1]);
+try{var l=localStorage.getItem('rtkclickid-store');if(l)return l}catch(e){}
+var p=new URLSearchParams(location.search);return p.get('rtkcid')||p.get('clickid')||''}
+function wire(){var c=cid();if(!c)return false;document.querySelectorAll('a[data-offer]').forEach(function(a){var u=new URL(a.href);u.searchParams.set('subid',c);a.href=u.toString()});return true}
+var n=0,t=setInterval(function(){if(wire()||++n>40)clearInterval(t)},250);
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-offer]');if(a)wire()},true);
+})();</script>
 </body>
 </html>
