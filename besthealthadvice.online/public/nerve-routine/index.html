@@ -117,6 +117,30 @@ sup a{text-decoration:none;font-family:'Figtree',system-ui,sans-serif;font-weigh
 footer{border-top:1px solid var(--rule);max-width:700px;margin:0 auto;padding:22px 16px 44px;text-align:center;font-family:'Figtree',system-ui,sans-serif;font-size:14px;color:var(--ink-soft)}
 footer nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 16px;margin-bottom:12px}
 footer nav a{color:var(--ink-soft)}
+
+.faq{margin:10px 0 30px;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule);padding:4px 0}
+.faq summary{cursor:pointer;list-style:none;font-family:'Figtree',system-ui,sans-serif;font-weight:700;font-size:18px;padding:14px 32px 14px 0;position:relative;line-height:1.4}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:24px;font-weight:400;color:var(--plum)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{font-size:17.5px;margin:0 0 16px}
+.habits{list-style:none;margin:8px 0 26px;padding:0;display:grid;gap:14px}
+.habits li{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;font-size:17.5px;line-height:1.55}
+.habits svg{width:48px;height:48px}
+.habits b{font-family:'Figtree',system-ui,sans-serif}
+.timeline{margin:10px 0 26px;padding:0;list-style:none;border-left:3px solid var(--rule);padding-left:20px}
+.timeline li{position:relative;margin-bottom:18px;font-size:17.5px;line-height:1.55}
+.timeline li::before{content:"";position:absolute;left:-29px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--husk);border:3px solid #fff;box-shadow:0 0 0 1px var(--rule)}
+.timeline b{display:block;font-family:'Figtree',system-ui,sans-serif}
+.who{display:grid;gap:14px;margin:10px 0 26px}
+@media(min-width:620px){.who{grid-template-columns:1fr 1fr}}
+.who div{border-radius:14px;padding:16px 18px;font-size:16.5px;line-height:1.55}
+.who .yes{background:var(--sage)}
+.who .ask{background:#fbf1dc}
+.who h3{font-family:'Figtree',system-ui,sans-serif;font-size:17px;margin:0 0 8px}
+.who ul{margin:0;padding-left:20px}
+.who li{margin-bottom:6px}
 </style>
 <!-- RedTrack universal script for the FlowNerves campaign goes here -->
 </head>
@@ -130,7 +154,7 @@ footer nav a{color:var(--ink-soft)}
 <p class="topic">Nerve health</p>
 <h1>Tingling, "pins and needles" feet at night? What researchers know about the nutrients your nerves run on</h1>
 <p class="dek">Nerves are some of the most energy-hungry cells in the body. Here's what peer-reviewed studies say about alpha lipoic acid, carnitine and other nutrients, and the simple evening routine some adults are adding.</p>
-<div class="byline"><span><strong>Sponsored content</strong> by Best Health Advice</span><span>Published November 16, 2026</span><span>6 min read</span></div>
+<div class="byline"><span><strong>Sponsored content</strong> by Best Health Advice</span><span>Published November 16, 2026</span><span>9 min read</span></div>
 
 <figure class="hero">
 <svg class="hero-art" viewBox="0 0 700 360" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="heroT">
@@ -187,6 +211,12 @@ footer nav a{color:var(--ink-soft)}
 <h2>Why the nerves in your feet are so demanding</h2>
 <p>Some of the nerves that reach your toes are among the longest cells in the body. Keeping signals moving along that distance takes a constant supply of energy, oxygen-rich blood flow, and protection from the oxidative stress that naturally builds up with age.</p>
 
+<p>Over the years, several everyday factors can make that job harder: getting older, long hours sitting or standing, poor circulation in the legs, low levels of certain nutrients, and lifestyle habits like smoking or heavy drinking. The <a href="https://www.ninds.nih.gov/health-information/disorders/peripheral-neuropathy" target="_blank" rel="noopener">National Institute of Neurological Disorders and Stroke</a> also lists conditions such as diabetes and vitamin deficiencies among the common reasons people develop nerve problems, which is why a check-up matters.</p>
+
+<h2>Why does it often feel worse at night?</h2>
+<p>Many people notice their feet bother them most when they finally lie down. During the day, movement and distractions compete for your attention. At night, in a quiet room, the brain has fewer signals to process, so tingling or burning can feel more noticeable. Changes in temperature under the covers and staying still for long periods may also play a role.</p>
+<p>That's one reason many people prefer to make nerve support part of an evening wind-down routine.</p>
+
 <div class="how">
   <h3>Three things healthy nerves rely on</h3>
   <ol>
@@ -238,6 +268,17 @@ footer nav a{color:var(--ink-soft)}
   <p class="src">Physiological Reviews, 2015 · Frontiers in Physiology, 2018</p></div>
 </div>
 
+<h2>Everyday habits that support healthy nerves</h2>
+<p>No supplement replaces the basics. Doctors and nerve-health organizations commonly recommend these habits:</p>
+<ul class="habits">
+  <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#eef0f8"/><path d="M17 34c4-8 2-14 6-18M27 34c-2-6 2-10 2-16" stroke="#3346a8" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="23" cy="13" r="3" fill="#3346a8"/></svg><span><b>Keep moving.</b> Regular walking or light exercise helps keep blood flowing to the legs and feet.</span></li>
+  <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#fbf1dc"/><path d="M14 30c0-6 4-8 8-8h6c3 0 6 3 6 6v2Z" fill="#e0a33a"/><path d="M14 30h20" stroke="#1b2140" stroke-width="2" stroke-linecap="round"/></svg><span><b>Check your feet daily.</b> Look for cuts, blisters or color changes, and wear comfortable, well-fitting shoes.</span></li>
+  <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#eef5ec"/><path d="M24 12c-6 6-9 11-9 15a9 9 0 0 0 18 0c0-4-3-9-9-15Z" fill="#57955f"/></svg><span><b>Eat a balanced diet.</b> Include foods rich in B vitamins, such as fish, eggs, leafy greens and whole grains. Low vitamin B12 is a well-known cause of nerve symptoms (<a href="https://ods.od.nih.gov/factsheets/VitaminB12-Consumer/" target="_blank" rel="noopener">NIH fact sheet</a>).</span></li>
+  <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#eef0f8"/><rect x="15" y="12" width="18" height="24" rx="3" fill="none" stroke="#1b2140" stroke-width="2"/><path d="M19 19h10M19 24h10M19 29h6" stroke="#3346a8" stroke-width="2" stroke-linecap="round"/></svg><span><b>Get regular check-ups.</b> Ask your doctor about blood sugar, B12 and circulation, especially if symptoms are new or getting worse.</span></li>
+  <li><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#fbf1dc"/><path d="M16 32l16-16" stroke="#c4473f" stroke-width="3" stroke-linecap="round"/><circle cx="24" cy="24" r="12" fill="none" stroke="#c4473f" stroke-width="3"/></svg><span><b>Limit alcohol and don't smoke.</b> Both are linked to poorer nerve and blood vessel health.</span></li>
+</ul>
+<p>For many adults, a targeted nutritional supplement is one more piece of that routine.</p>
+
 <h2>A simpler way to get these nutrients together</h2>
 <p>Getting meaningful amounts of these nutrients from food alone isn't easy. That's why some adults are adding a daily nerve-support supplement to their evening routine.</p>
 
@@ -264,6 +305,41 @@ footer nav a{color:var(--ink-soft)}
   <div><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#eef0f8"/><circle cx="22" cy="22" r="10" fill="#e0a33a"/><circle cx="26" cy="19" r="9" fill="#eef0f8"/></svg><span><b>Follow the label:</b> take FlowNerves as directed on the bottle, ideally at the same time each day.</span></div>
   <div><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#eef0f8"/><path d="M15 11h14l-2 23H17Z" fill="#c7d3f2" stroke="#1b2140" stroke-width="2"/></svg><span><b>With a glass of water:</b> and alongside regular movement, comfortable footwear and a balanced diet.</span></div>
   <div><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21" fill="#fbf1dc"/><rect x="12" y="13" width="20" height="18" rx="3" fill="none" stroke="#1b2140" stroke-width="2"/><path d="M12 18h20" stroke="#1b2140" stroke-width="2"/><path d="M17 24l3 3 6-6" stroke="#3346a8" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Be consistent:</b> nutritional support takes time. Do not exceed the recommended amount.</span></div>
+</div>
+
+<a class="cta" href="https://bg.flownerves.com/dtc-b/?aff_id=2902" data-offer>See FlowNerves on the official website<span>Full ingredient list, label and package options</span></a>
+<p class="cta-note">Opens the official FlowNerves website.</p>
+
+<h2>Is it right for you?</h2>
+<div class="who">
+  <div class="yes"><h3>People often consider it if they</h3><ul>
+    <li>Are adults looking to support healthy nerve function as they age</li>
+    <li>Want antioxidants and circulation-support ingredients in one routine</li>
+    <li>Have already talked with their doctor about their symptoms</li>
+  </ul></div>
+  <div class="ask"><h3>Talk to your doctor first if you</h3><ul>
+    <li>Take blood thinners, blood sugar or blood pressure medication</li>
+    <li>Are pregnant, nursing or under 18</li>
+    <li>Have new, sudden or worsening numbness, weakness or pain</li>
+    <li>Have a wound on your feet that isn't healing</li>
+  </ul></div>
+</div>
+
+<h2>What to realistically expect</h2>
+<p>Nutritional support works gradually, and experiences vary. Here is a sensible way to think about it:</p>
+<ul class="timeline">
+  <li><b>The first weeks</b>Build the habit: same time every evening, with water, alongside the healthy routines above.</li>
+  <li><b>One to three months</b>This is the time frame used in many ingredient studies. Pay attention to how your feet feel day to day, and keep notes if it helps.</li>
+  <li><b>Ongoing</b>Keep up regular check-ups and share any supplement you take with your doctor.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is FlowNerves?</summary><p>FlowNerves is a dietary supplement made with magnesium, alpha lipoic acid, L-carnitine, butcher's broom extract, turmeric extract (95% curcuminoids) and coenzyme Q10, formulated to support healthy nerve function and circulation.</p></details>
+  <details><summary>Can it cure neuropathy?</summary><p>No. FlowNerves is not a medicine and is not intended to diagnose, treat, cure or prevent any disease. Nerve symptoms can have medical causes that need a doctor's care. A supplement can be one part of a healthy routine, not a replacement for treatment.</p></details>
+  <details><summary>How do I take it?</summary><p>Follow the directions on the label. Many people take it at the same time each evening with a glass of water.</p></details>
+  <details><summary>Can I take it with my medication?</summary><p>Ask your doctor or pharmacist first. Alpha lipoic acid may affect blood sugar levels, and some ingredients may interact with blood thinners or other medications.</p></details>
+  <details><summary>Where can I buy it?</summary><p>FlowNerves is sold through its official website, where you'll find current package options, shipping details and the manufacturer's return policy.</p></details>
 </div>
 
 <p>Results vary from person to person. If you take medication (including blood thinners or medication for blood sugar), are pregnant or nursing, or have a medical condition, talk to your doctor before starting any supplement.</p>
